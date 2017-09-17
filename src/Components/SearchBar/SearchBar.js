@@ -3,7 +3,7 @@
 class SearchBar extends Component {
   render() {
     return (
-      <div class="SearchBar">
+      <div className="SearchBar">
         <input placeholder="Enter A Song, Album, or Artist" />
         <a>SEARCH</a>
       </div>
