@@ -12,7 +12,8 @@ class App extends Component {
       searchResults: [],
       playListName: 'New Playlist',
       playListTracks: []
-    };
+    }
+
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlayListName = this.updatePlayListName.bind(this);
