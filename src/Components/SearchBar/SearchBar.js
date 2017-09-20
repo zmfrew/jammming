@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SearchBar.css';
 
-class SearchBar extends Component {
+class SearchBar extends React.Component {
   constructor(props) {
       super(props);
-      this.state = { term: '' };
-      this.search = this.search.bind(this);
+      this.state = {
+        term: ''
+       };
       this.handleTermChange = this.handleTermChange.bind(this);
+      this.search = this.search.bind(this);
   }
 
-  handleTermChange(e) {
-    this.setState({ term: e.target.value });
+  handleTermChange(event) {
+    this.setState({ term: event.target.value });
   }
 
   search() {
@@ -20,7 +22,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="SearchBar">
-        <input onChange={this.handleTermChange} placeholder="Enter A Song, Album, or Artist" />
+        <input placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} />
         <a onClick={this.search}>SEARCH</a>
       </div>
     );
@@ -28,4 +30,3 @@ class SearchBar extends Component {
 }
 
 export default SearchBar;
-// line 23 may be changed to 'onSearch'
