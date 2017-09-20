@@ -1,5 +1,7 @@
 const clientId = '45409638ebf04deb9f759c9fc64997d9';
 const redirectUri = 'http://localhost:3000/';
+const accessURIBase = 'https://accounts.spotify.com/authorize';
+const spotifyURIBase = 'https://api.spotify.com/v1/';
 
 let accessToken;
 
