@@ -1,7 +1,5 @@
 const clientId = '45409638ebf04deb9f759c9fc64997d9';
 const redirectUri = 'http://localhost:3000/';
-const accessURIBase = 'https://accounts.spotify.com/authorize';
-const spotifyURIBase = 'https://api.spotify.com/v1/';
 
 let accessToken;
 
@@ -66,8 +64,8 @@ const Spotify = {
         body: JSON.stringify({name: name})
       }).then(response => response.json()
       ).then(jsonResponse => {
-        const playlistID = jsonResponse.id;
-        return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistID}/tracks`, {
+        const playlistId = jsonResponse.id;
+        return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`, {
           headers: headers,
           method: 'POST',
           body: JSON.stringify({uris: trackUris})

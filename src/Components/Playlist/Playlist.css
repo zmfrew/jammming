@@ -1,4 +1,5 @@
 .Playlist {
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
